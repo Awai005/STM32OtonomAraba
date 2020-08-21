@@ -27,8 +27,6 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-extern ADC_HandleTypeDef hadc1;
-extern DMA_HandleTypeDef hdma_adc1;
 extern SPI_HandleTypeDef hspi2;
 /* USER CODE END TD */
 
@@ -200,16 +198,6 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /* USER CODE BEGIN 1 */
-void ADC1_2IRQHandler(void)
-{
-	HAL_ADC_IRQHandler(&hadc1);
-}
-
-void DMA1_Channel1_IRQHandler(void)
-{
-    HAL_DMA_IRQHandler(&hdma_adc1);
-}
-
 void SPI2_IRQHandler(void)
 {
 
